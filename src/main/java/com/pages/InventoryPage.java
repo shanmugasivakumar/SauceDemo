@@ -51,18 +51,4 @@ public class InventoryPage {
         driver.findElement(By.className("shopping_cart_link")).click();
     }
 
-    public int getCartItemCount() throws InterruptedException {
-        Thread.sleep(2000);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
-        try {
-            WebElement badge = wait.until(
-                    ExpectedConditions.presenceOfElementLocated(By.className("shopping_cart_badge"))
-            );
-            return Integer.parseInt(badge.getText());
-
-        } catch (Exception e) {
-            return 0; // Badge not visible means cart is empty
-        }
-    }
 }
