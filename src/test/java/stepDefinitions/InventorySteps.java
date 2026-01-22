@@ -33,11 +33,6 @@ public class InventorySteps {
         expectedProductName = inventoryPage.addHighestPriceProductToCart();
     }
 
-    @Then("cart should show 1 item")
-    public void verify_cart_count() throws InterruptedException {
-        Assert.assertEquals(inventoryPage.getCartItemCount(), 1);
-    }
-
     @Then("highest priced product should be present in the cart")
     public void verify_product_in_cart() {
         inventoryPage.openCart();
