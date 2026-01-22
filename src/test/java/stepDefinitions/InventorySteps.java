@@ -34,7 +34,7 @@ public class InventorySteps {
     }
 
     @Then("cart should show 1 item")
-    public void verify_cart_count() {
+    public void verify_cart_count() throws InterruptedException {
         Assert.assertEquals(inventoryPage.getCartItemCount(), 1);
     }
 
