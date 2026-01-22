@@ -15,7 +15,7 @@ public class DriverFactory {
 
     public static void initDriver() {
 
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().browserVersion("143").setup();
 
         ChromeOptions options = new ChromeOptions();
 
