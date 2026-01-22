@@ -12,6 +12,6 @@ public class CartPage {
     }
 
     public String getCartProductName() {
-        return driver.findElement(By.xpath("//div[@class="inventory_list"]//div[4]//div[@class="inventory_item_name "]).getText();
+        return driver.findElement(By.xpath("//div[@class="inventory_list"]//div[4]//div[@class="inventory_item_name "]").getText();
     }
 }
